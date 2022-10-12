@@ -7,10 +7,9 @@ public class Main {
         SessionFactoryUtils sessionFactoryUtils = new SessionFactoryUtils();
         sessionFactoryUtils.init();
         try {
-            Session session = sessionFactoryUtils.getSession();
-            session.beginTransaction();
-            Product product = session.get(Product.class, 3L);
-            session.getTransaction().commit();
+            ProductDao productDao = new ProductDao(sessionFactoryUtils);
+            Product product = productDao.findById(2L);
+            productDao.deleteById(2L);
             System.out.println(product.getTitle());
         }
         catch (Exception e) {

@@ -1,10 +1,13 @@
-package org.example;
+package org.example.dao;
 
+import org.example.model.Customer;
+import org.example.model.Product;
+import org.example.SessionFactoryUtils;
 import org.hibernate.Session;
 
 import java.util.List;
 
-public class ProductDao {
+public class ProductDao{
     SessionFactoryUtils sessionFactoryUtils;
 
     public ProductDao(SessionFactoryUtils sessionFactoryUtils) {
@@ -42,6 +45,15 @@ public class ProductDao {
             session.beginTransaction();
             session.saveOrUpdate(product);
             session.getTransaction().commit();
+        }
+    }
+
+    public List<Customer> getCustomers(Long id) {
+        try(Session session = sessionFactoryUtils.getSession()) {
+            session.beginTransaction();
+            List<Customer> customers = session.get(Product.class, id).getCustomers();
+            session.getTransaction().commit();
+            return customers;
         }
     }
 }

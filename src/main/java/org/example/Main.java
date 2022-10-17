@@ -1,22 +1,23 @@
 package org.example;
 
-import org.hibernate.Session;
+import org.example.model.Customer;
+import org.example.model.Product;
+import org.example.services.CustomerService;
+import org.example.services.ProductService;
 
 public class Main {
     public static void main(String[] args) {
         SessionFactoryUtils sessionFactoryUtils = new SessionFactoryUtils();
         sessionFactoryUtils.init();
-        try {
-            ProductDao productDao = new ProductDao(sessionFactoryUtils);
-            Product product = productDao.findById(2L);
-            productDao.deleteById(2L);
-            System.out.println(product.getTitle());
+        CustomerService customerService = new CustomerService(sessionFactoryUtils);
+        ProductService productService = new ProductService(sessionFactoryUtils);
+
+        for (Product product: customerService.getProducts(1L)) {
+            System.out.println(product.getId() + " " + product.getTitle() + " " + product.getPrice());
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        finally {
-            sessionFactoryUtils.shutdown();
+
+        for (Customer product: productService.getCustomers(1L)) {
+            System.out.println(product.getId() + " " + product.getName());
         }
     }
 }

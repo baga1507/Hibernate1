@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a72962d-28d4-419c-9bf6-aff525c12d5e" name="Changes" comment="Start">
+    <list default="true" id="4a72962d-28d4-419c-9bf6-aff525c12d5e" name="Changes" comment="Finish">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9455463e-8007-44e1-be5b-c161c41598fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9455463e-8007-44e1-be5b-c161c41598fc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0d01211-cb19-42cd-bc09-23f550eb6df3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0d01211-cb19-42cd-bc09-23f550eb6df3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -52,7 +63,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "spring.configuration.checksum": "6cada732fce21e79a3f596d35dbc4930"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -69,7 +81,7 @@
       <module name="Hibernate1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,6 +112,8 @@
       <updated>1665576453218</updated>
       <workItem from="1665579397974" duration="3485000" />
       <workItem from="1665583046405" duration="3250000" />
+      <workItem from="1666019409275" duration="786000" />
+      <workItem from="1666020306787" duration="1687000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1665587026647</created>
@@ -126,7 +140,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="first" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -1,11 +1,11 @@
-package org.example;
+package org.example.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
 public class Product {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -16,6 +16,18 @@ public class Product {
 
     @Column(name = "price")
     private int price;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable (
+            name = "products_customers",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "customer_id")
+    )
+    private List<Customer> customers;
+
+    public List<Customer> getCustomers() {
+        return customers;
+    }
 
     public Long getId() {
         return id;
